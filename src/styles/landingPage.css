@@ -1,0 +1,7 @@
+#root > div > div > img{
+    background: none;
+    border: none;
+    background-size: cover;
+    height: 190px;
+}
+

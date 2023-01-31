@@ -1,0 +1,16 @@
+.carousel-root ,.slider{
+    height: 500px;
+}
+
+.thumbs,.legend {
+display: none;
+}
+
+.contenedor-slider{
+    height: 500px;
+}
+
+.img-slider{
+  height: 1000px;
+    
+}

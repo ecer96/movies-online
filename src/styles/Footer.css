@@ -1,0 +1,11 @@
+.footer{
+    background-color: #f1f1f1;
+}
+
+.copy{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.icon:hover{
+    transform: scale3d(1.5 , 1.5 , 1.5);
+}
