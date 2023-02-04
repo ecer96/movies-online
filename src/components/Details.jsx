@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 export const Details = () => {
   const { id } = useParams();
@@ -32,7 +32,7 @@ export const Details = () => {
       <p>{pelicula.overview}</p>
     <div className="flex justify-center ">
 
-        <a className="px-4 py-3 bg-cyan-900 align-middle no-underline rounded-lg  text-white text-center hover:bg-orange-200 hover:text-black" href={process.env.PUBLIC_URL+ "/search"}>Atras</a>
+        <NavLink className="px-4 py-3 bg-cyan-900 align-middle no-underline rounded-lg  text-white text-center hover:bg-orange-200 hover:text-black" to="/search">Atras</NavLink>
     </div>
     </div>
     
