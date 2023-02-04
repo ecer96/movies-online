@@ -15,7 +15,7 @@ function App() {
             
                 <NavBar />
                 <Routes>
-                    <Route path="/movies-online" element={<Home/>} />
+                    <Route path="/" element={<Home/>} />
                     <Route path="about" element={<LandingPage />} />
                     <Route path="search" element={<Search/>} />
                     <Route path="details/:id" element={<Details/>} />
