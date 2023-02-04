@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/movies-online/static/css/main.59d724ea.css",
-    "main.js": "/movies-online/static/js/main.a88e4e5f.js",
+    "main.js": "/movies-online/static/js/main.07d0568a.js",
     "static/js/787.c8d72917.chunk.js": "/movies-online/static/js/787.c8d72917.chunk.js",
     "index.html": "/movies-online/index.html",
     "main.59d724ea.css.map": "/movies-online/static/css/main.59d724ea.css.map",
-    "main.a88e4e5f.js.map": "/movies-online/static/js/main.a88e4e5f.js.map",
+    "main.07d0568a.js.map": "/movies-online/static/js/main.07d0568a.js.map",
     "787.c8d72917.chunk.js.map": "/movies-online/static/js/787.c8d72917.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.59d724ea.css",
-    "static/js/main.a88e4e5f.js"
+    "static/js/main.07d0568a.js"
   ]
 }
