@@ -8,8 +8,12 @@ const [selectedMovie, setSelectedMovie] = useState(null);
 
 
 useEffect(() => {
-    fetchPopularMovies();
-    fetchHorrorMovies();
+    const fetchData=async ()=>{
+        await fetchPopularMovies();
+        await fetchHorrorMovies();
+    }
+    fetchData();
+        
 }, [fetchPopularMovies, fetchHorrorMovies]);
 
 
@@ -20,46 +24,41 @@ const handleClick = (movie) => {
 if (!selectedMovie) {
     return (
         <>
-         <Slider />
-             <h1 className="text-white ml-4 mt-5 t">Popular Movies</h1>
-        <div className="flex flex-wrap justify-center">
-            {popularMovies.map((peliculas) => {
-                return (
-                    <div key={peliculas.id} className="m-4" onClick={() => handleClick(peliculas)}>
-                        <img
-                            src={`https://image.tmdb.org/t/p/w500/${peliculas.poster_path}`}
-                            alt={peliculas.title}
-                            className="h-72 object-contain hover:scale-125 cursor-pointer rounded-xl"
-                        />
-                    </div>
-                );
-            })}
-
-            <div className="">
+            <Slider />
+            <h1 className="text-white ml-4 mt-5 t">Popular Movies</h1>
+            <div className="flex flex-wrap justify-center">
+                {popularMovies.map((peliculas) => {
+                    return (
+                        <div key={peliculas.id} className="m-4" onClick={() => handleClick(peliculas)}>
+                            <img
+                                src={`https://image.tmdb.org/t/p/w500/${peliculas.poster_path}`}
+                                alt={peliculas.title}
+                                className="h-72 object-contain hover:scale-125 cursor-pointer rounded-xl"
+                            />
+                        </div>
+                    );
+                })}
+            </div>
 
             <h1 className="text-white ml-4 mt-4">Horror Movies</h1>
             <div className="flex flex-wrap justify-center">
-
-            {horrorMovies.map((peliculas) => {
-                return (
-                    <div key={peliculas.id} className="m-4" onClick={() => handleClick(peliculas)}>
-                        <img
-                            src={`https://image.tmdb.org/t/p/w500/${peliculas.poster_path}`}
-                            alt={peliculas.title}
-                            className="h-72 object-contain hover:scale-125 cursor-pointer rounded-xl"
-                        />
-                      
-                    </div>
-                );
-            })}
+                {horrorMovies.map((peliculas) => {
+                    return (
+                        <div key={peliculas.id} className="m-4" onClick={() => handleClick(peliculas)}>
+                            <img
+                                src={`https://image.tmdb.org/t/p/w500/${peliculas.poster_path}`}
+                                alt={peliculas.title}
+                                className="h-72 object-contain hover:scale-125 cursor-pointer rounded-xl"
+                            />
+                        </div>
+                    );
+                })}
             </div>
-            </div>
-        </div>
         </>
     );
+
 } else {
     return (
-        <>
        
         <div className="flex flex-col items-center">
             <img
@@ -79,7 +78,7 @@ if (!selectedMovie) {
                 Volver
             </button>
         </div>
-        </>
+        
     );
 }
 
