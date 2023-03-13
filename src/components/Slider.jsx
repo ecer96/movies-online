@@ -9,12 +9,16 @@ export const Slider = () => {
     const {movies} = useContext(MovieContext);
 
     return (
-        <div>
+        <div className="relative">
            <Carousel>
            {movies.map((peliculas) => {
                     return (
                     <div className="contenedor-slider d-flex" key={peliculas.id}>
-                    <img className=" img-slider img-fluid object-fill h-screen " src={`https://image.tmdb.org/t/p/w500/${peliculas.poster_path}`} alt={peliculas.id}  />
+                    <img className=" img-slider img-fluid object-fill h-screen absolute img-position" 
+                    src={`https://image.tmdb.org/t/p/w500/${peliculas.poster_path}`}
+                     alt={peliculas.id}  
+                        style={{bottom:'-400px','maxHeight':'1000px'}}
+                     />
                     <p className="legend">{peliculas.id}</p>
                   </div>
                     );

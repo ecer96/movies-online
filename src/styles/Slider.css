@@ -14,3 +14,8 @@ display: none;
   height: 1000px;
     
 }
+@media  (min-width:300px) and (max-width: 600px) {
+    .img-position {
+        bottom: -40px !important;
+    }
+}

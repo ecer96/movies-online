@@ -21,15 +21,15 @@ if (!selectedMovie) {
     return (
         <>
          <Slider />
-             <h1 className="text-white ml-4">Popular Movies</h1>
-        <div className="flex flex-wrap">
+             <h1 className="text-white ml-4 mt-5 t">Popular Movies</h1>
+        <div className="flex flex-wrap justify-center">
             {popularMovies.map((peliculas) => {
                 return (
                     <div key={peliculas.id} className="m-4" onClick={() => handleClick(peliculas)}>
                         <img
                             src={`https://image.tmdb.org/t/p/w500/${peliculas.poster_path}`}
                             alt={peliculas.title}
-                            className="h-72 object-contain hover:scale-125 cursor-pointer"
+                            className="h-72 object-contain hover:scale-125 cursor-pointer rounded-xl"
                         />
                     </div>
                 );
@@ -37,8 +37,8 @@ if (!selectedMovie) {
 
             <div className="">
 
-            <h1 className="text-white ml-4">Horror Movies</h1>
-            <div className="flex flex-wrap">
+            <h1 className="text-white ml-4 mt-4">Horror Movies</h1>
+            <div className="flex flex-wrap justify-center">
 
             {horrorMovies.map((peliculas) => {
                 return (
@@ -46,7 +46,7 @@ if (!selectedMovie) {
                         <img
                             src={`https://image.tmdb.org/t/p/w500/${peliculas.poster_path}`}
                             alt={peliculas.title}
-                            className="h-72 object-contain hover:scale-125 cursor-pointer"
+                            className="h-72 object-contain hover:scale-125 cursor-pointer rounded-xl"
                         />
                       
                     </div>
