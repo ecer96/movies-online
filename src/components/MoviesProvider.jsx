@@ -46,7 +46,7 @@ const MoviesProvider = ({ children }) => {
   const fetchHorrorMovies = async () => {
     setIsHorrorMovieLoading(true);
     try {
-      const response = await fetch('http://api.themoviedb.org/3/discover/movie?api_key=02fad26e95ab5e512e037525b32d12c3&with_genres=27');
+      const response = await fetch('https://api.themoviedb.org/3/discover/movie?api_key=02fad26e95ab5e512e037525b32d12c3&with_genres=27');
       const data = await response.json();
       setHorrorMovies(data.results);
     } catch (err) {
